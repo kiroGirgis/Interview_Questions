@@ -88,5 +88,23 @@ When you frequently query a table by a particular column or When the table has a
 ANSWER:
 UNION is used when you are trying to combine the results of two queries and remove the duplicated rows, while UNION ALL is used to combine the results of two queries without removing the duplicates. Similar to the DISTINCT function.
 
+-- What are CASE statements in SQL?
+
+ANSWER:
+A CASE statement in SQL is used to perform conditional logic inside a SQL query. It has a similar functions to IF-THEN ELSE statements. It allows you to return differnt values based on conditions. For example, the following query will return the value High if employee salary is more than 50,000 and the value Medium if the employee salary is between 30,000 and 50,000 and anything else it will return the value Low
+
+SELECT EmployeeID, 
+       Salary, 
+       CASE 
+          WHEN Salary > 50000 THEN 'High'
+          WHEN Salary BETWEEN 30000 AND 50000 THEN 'Medium'
+          ELSE 'Low'
+       END AS SalaryLevel
+FROM Employees;
+
+-- What is a subquery in SQL?
+
+A subquery is a query within another query. It is used to return data that will be used by the outer query. A subquery can be used in the SELECT, FROM, WHERE, or HAVING clauses
+
 
 
