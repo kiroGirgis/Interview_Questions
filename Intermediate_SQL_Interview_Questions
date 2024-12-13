@@ -1,1 +1,92 @@
+/*
+Purpose: Welcome to this section of my portfolio! Here, you will find a curated collection of SQL interview questions
+that I have thoughtfully answered. 
+Each solution is accompanied by detailed comments and explanations to ensure clarity and to demonstrate my thought
+process.
+
+The goal of this repository is not only to showcase my proficiency in SQL but also to serve as a resource for others 
+preparing for interviews or
+looking to strengthen their understanding of SQL concepts.
+The questions cover a range of topics, from foundational queries to more advanced techniques, highlighting practical 
+applications
+and best practices in database management and analysis.
+
+Feel free to explore, learn, and reach out if you have any questions or would like to discuss these examples further.
+Let's grow together in mastering the art of data querying!
+here you will find some easy SQL interview questions that I answered with comments to explain
+Author: Kirolos Girgis
+*/
+
+
+-- What is the difference between INNER JOIN and OUTER JOIN?
+
+ANSWER:
+The INNER JOIN returns only the rows that have matching values in both tables involved in the join. If there is no match, the row will not appear in the result.
+On the other hand, the OUTER JOIN returns all rows from one table and the matching rows from the other table. IF there is no match, NULL values will be returned for columns from the table with no match.
+
+With OUTER JOIN there are three (3) different types of OUTER JOIN
+  1- LEFT OUTER JOIN: This returns all rows from the left table and the matching rows from the right table
+  2- RIGHT OUTER JOIN: This returns all rows from the right table and the matching rows from the left table
+  3- FULL OUTER JOIN: This returns all rows when there is a match in either tables
+
+-- How do you Handle NULL values in SQL?
+
+ANSWER:
+In SQL the NULL values represent any missing or unknown data from the database. SQL provides different ways to handle NULL values
+
+Option 1) A query Like ISNULL is used to check if a value is NULL. for example if you were to check in an employee table if there are any employees that does not have a department assignewd to them, you will write a query as follows
+
+SELECT * 
+FROM Employees 
+WHERE Department IS NULL;
+
+Option 2) A query like IS NOT NULL can be used to check if a value is NOT NULL. for example with the same employee table you want to check only the employees who have a department assigned to them, you will write a query as follows
+
+SELECT * 
+FROM Employees
+WHERE Department IS NOT NULL;
+
+Option 3) A query like COALESCE() is used to return the first non-NULL value from a list of arguments It's commonly used when you want to handle NULL values in your data and replace them with a more meaningful or default value. for example you have a customer list that you want to check if customers provided a phone number and if they did not you want to replace the empty cell with N/A
+
+SELECT COALESCE(PhoneNumber, 'N/A')
+FROM Customers;
+
+Option 4) the IFNULL() / NVL() this is used in some databases to replace NULL with specified values similar to  COALESCE(). here is how to write it with the same phone number example
+
+SELECT IFNULL(PhoneNumber, 'No Phone') 
+FROM Customers;
+
+-- What is a GROUP BY clause in SQL?
+
+ANSWER:
+The GROUP BY clause is used to group rows that have the same values into summary rows and it is often used with aggregate functions like COUNT(), SUN(), MAX(), MIN(), and AVG(). the GROUP BY clause is useful because it can group results based on one or more columns
+
+-- What is the difference between HAVING and WHERE in SQL?
+
+ANSWER:
+
+WHERE is used to filter rows before any grouping is done. It is used with individual rows to filter them based on a condition. On the other hand HAVING is used to filter groups after the GROUP BY clause. It is used when you need to filter groups based on aggregated data. for example the query below uses HAVIN to filter the departments that contains more than 5 employees
+
+SELECT Department,
+       COUNT(*) AS EmployeeCount
+FROM Employees
+GROUP BY Department
+HAVING COUNT(*) > 5;
+
+-- What is an index in SQL? Why and when should you use it?
+
+ANSWER:
+An index is a database object that improves the speed of data retrieval operations on a table at the cost of additional space and time to update the index whenever the table data changes. Indexes are used to quickly locate rows in a table.
+Primary Key Index: Automatically created when a primary key constraint is applied.
+Unique Index: Created when a unique constraint is applied to a column.
+
+When to use:
+When you frequently query a table by a particular column or When the table has a large number of rows.
+
+-- What is the difference between UNION and UNION ALL in SQL?
+
+ANSWER:
+UNION is used when you are trying to combine the results of two queries and remove the duplicated rows, while UNION ALL is used to combine the results of two queries without removing the duplicates. Similar to the DISTINCT function.
+
+
 
