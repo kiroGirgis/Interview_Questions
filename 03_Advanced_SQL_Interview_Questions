@@ -16,3 +16,21 @@ Let's grow together in mastering the art of data querying!
 here you will find some Advanced SQL interview questions that I answered with comments to explain
 Author: Kirolos Girgis
 */
+
+-- What are window functions in SQL? with some Examples
+
+-- What is the difference between UNION and INTERSECT in SQL?
+
+-- What is the difference between JOIN and SELF JOIN?
+
+-- What is the difference between a PRIMARY KEY and a FOREIGN KEY?
+
+-- What are common techniques to handle large Datasets in SQL?
+
+-- How do you optimize a query for better performance?
+
+-- What is a recursive query in SQL?
+
+-- Explain the EXPLAIN command in SQL?
+
+-- What is ACID in SQL?
