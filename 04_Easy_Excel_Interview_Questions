@@ -16,3 +16,28 @@ Let's grow together in mastering the art of data querying!
 here you will find some easy EXCEL interview questions that I answered with comments to explain
 Author: Kirolos Girgis
 */
+
+
+-- What is the difference between a workbook and a worksheet?
+
+ANSWER:
+A Workbook is an Excel file that contains one or more worksheets, its the entire file where the data is stored. On the other hand, A Worksheet is a single sheet within  a workbook where data, formulas, and charts are stored.
+
+-- How do you apply a filter in EXCEL?
+
+ANSWER:
+To apply a filter:
+Select the data range you want to filter.
+Go to the Data tab and click on Filter.
+Dropdown arrows will appear at the top of each column. You can click the arrow to filter by specific criteria.
+
+--What is the difference between relative, absolute, and mixed cell references in EXCEL?
+
+ANSWER:
+
+A Relative reference Changes when the formula is copied to another cell. While Absolute reference Remains constant no matter where it is copied. Mixed reference either the column (A) or the row (1) is fixed, but not both.
+
+-- What is conditional Formatting and how is it used?
+
+ANSWER:
+Conditional formatting is used to automatically apply formatting to cells based on specific criteria. The way it is used is that you select the range of cells you want to format and go to the Home tab and click on Conditional Formatting then choose a rule or create a custom formula.
