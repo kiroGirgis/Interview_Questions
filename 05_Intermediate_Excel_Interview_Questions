@@ -16,3 +16,9 @@ Let's grow together in mastering the art of data querying!
 here you will find some Intermediate Excel interview questions that I answered with comments to explain
 Author: Kirolos Girgis
 */
+
+
+-- What is the difference between VLOOKUP and INDEX-MATCH?
+
+ANSWER:
+VLOOKUP searches for a value in the first column of a range and returns a value from a specified column in the same row. it does requrie the lookup column to be the first column and it does not support searching from right to left. On the other hand, INDEX-MATCH is more flexible, INDEX retrieves a value from a specified row and column in a range and MATCH returns the position of a value in a range combined they can perform lookups in any direction
