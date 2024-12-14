@@ -41,3 +41,19 @@ A Relative reference Changes when the formula is copied to another cell. While A
 
 ANSWER:
 Conditional formatting is used to automatically apply formatting to cells based on specific criteria. The way it is used is that you select the range of cells you want to format and go to the Home tab and click on Conditional Formatting then choose a rule or create a custom formula.
+
+-- What is the purpose oof the VLOOKUP function in EXCEL?
+
+ANSWER: 
+VLOOKUP or vertical lookup is used to find a value in the first column of a range and return a corresponding value in the same row from another column
+
+-- What is the difference between a formula and a function in EXCEL?
+
+Answer:
+A formula is an expression crreated by the user to perform calculations while a function is a predefined formula in Excel
+
+-- What are pivot tables in EXCEL?
+
+Answer:
+Pivot tables are a powerful feature in Excel used to summarize, analyze and present large datasetts in a meaningful way. they allow you to quickly calculate metrics like sums, averages, and counts grouped by categories.
+
