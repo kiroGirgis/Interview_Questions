@@ -16,3 +16,44 @@ Let's grow together in mastering the art of data querying!
 here you will find some Advanced Excel interview questions that I answered with comments to explain
 Author: Kirolos Girgis
 */
+
+-- What is an array formula, and how does it differ from a regular formula?
+
+ANSWER:
+An array formula performs multiple calculations on a range of values and returns one or multiple results. It works on arrays instead of single values like regular formulas.
+
+-- How would you combine data from multiple worksheets into a single summary sheet dynamically?
+
+ANSWER:
+You can combine data from multiple worksheets using consolidate tool, power Query(prefered for large datasets), or VBA mainly for automating data extraction from multiple sheets
+
+-- How would you use power Query to clean and transform data? Can you derscribe a step-by-step example?
+
+ANSWER:
+Power Query automates data cleaning and transformation:
+
+Load Data:
+Go to Data > Get Data and import your dataset.
+Transform Data: Remove blank rows, errors, and duplicates.
+Split columns, trim spaces, and filter rows.
+Change Data Types: Ensure columns have correct formats (e.g., Date, Number, Text).
+Combine Data: Append or merge queries from multiple sources.
+Load Cleaned Data: Click Close & Load to output the cleaned data into Excel.
+
+-- How do you use Excel Advanced filter to extract unique records or filter data with criteria?
+
+ANSWER
+1- Go to Data > Advanced Filter.
+2- Choose Copy to Another Location.
+3- Check Unique Records Only to remove duplicates.
+4- Use a criteria range to apply complex filters.
+
+-- What is a scenario where you would use Excel Goal Seek, solver, or what-if Analysis tools?
+
+ANSWER:
+Goal Seek: Use when you know the desired result and need to find the input value.
+Example: To find the required interest rate for a loan payment of $500.
+Solver: Use for complex optimization problems with constraints.
+Example: Maximize profits by adjusting production levels.
+What-If Analysis: Use to analyze scenarios based on different inputs.
+Example: Create a Scenario Summary for high, medium, and low sales estimates.
